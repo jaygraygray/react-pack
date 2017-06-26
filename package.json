@@ -1,0 +1,23 @@
+{
+  "name": "jaygraysreactpacks",
+  "version": "1.0.0",
+  "description": "Package of custom React templates to speed development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Gus is the supreme wackness.\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaygraygray/react-pack.git"
+  },
+  "keywords": [
+    "react",
+    "template"
+  ],
+  "author": "jaygraygray",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaygraygray/react-pack/issues"
+  },
+  "homepage": "https://github.com/jaygraygray/react-pack#readme"
+}
