@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router-dom'
+
 class Header extends Component {
   render() {
     return (
@@ -8,11 +10,19 @@ class Header extends Component {
           <div className="col-sm-1"></div>
           
           <div className="col-sm-5">
-            <h1>I am Logo Land</h1>
+            <center>
+              <h1>I am Logo Land</h1>
+            </center>
           </div>
           
           <div className="col-sm-5">
-            <h3>This Is Where Nav Goes</h3>
+            <center>
+              <ul>
+                <li><Link to="/">View One</Link></li>
+                <li><Link to="/two">View Two</Link></li>
+                <li><Link to="/three">View Three</Link></li>
+              </ul>
+            </center>
           </div>
 
           <div className="col-sm-1"></div>

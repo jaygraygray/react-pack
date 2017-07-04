@@ -4,7 +4,9 @@ class Body extends Component {
   render() {
     return (
       <div>
+        <center>
         {this.props.children}
+        </center>
       </div>
     );
   }
