@@ -14,17 +14,26 @@ import { getAPIViewOne } from '../ducks/actions'
 
 class ViewOne extends Component {
 
-
+ constructor(props) {
+   super(props)
+   this.state = {
+     data: {}
+   }
+ }
 
   componentDidMount() {
-    this.props.getAPIViewOne()
+   axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5').then((r) => {
+    this.setState({ data: r.data})
+    })
+
+
   }
 
   
   
 
   render() {
-    console.log(this.props)
+    console.log(this.state)
     return (
       <div>
         <Header />
@@ -41,9 +50,10 @@ class ViewOne extends Component {
 }
 
 
-function mapStateToProps(state) {
-  return {
-    apiData: state.api
-  }
-}
-export default connect(mapStateToProps, { getAPIViewOne })(ViewOne);
+// function mapStateToProps(state) {
+//   return {
+//     apiData: state.api
+//   }
+// }
+// export default connect(mapStateToProps, { getAPIViewOne })(ViewOne);
+export default ViewOne

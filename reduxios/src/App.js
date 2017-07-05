@@ -11,7 +11,7 @@ import { Switch, BrowserRouter, Route, Router } from 'react-router-dom'
 class App extends Component {
   render() {
     return (
-      <div>sdfg
+      <div>
         <BrowserRouter>
           <Switch>
            <Route exact path="/" component={ViewOne} />

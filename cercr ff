@@ -1,0 +1,53 @@
+[33mcommit 4e7c63a9a68d08546dac7612bcb4dafea2681c38[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Wed Jul 5 14:57:38 2017 -0600
+
+    API data returning, not rendering correctly in component
+
+[33mcommit 88c2e81bffb931758f62b03d91223c36699e11b5[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Wed Jul 5 10:00:58 2017 -0600
+
+    Hooked View compenents to Redux store.
+
+[33mcommit 76646fd5a6e58148664199cbfdb14fb8d78adb65[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Mon Jul 3 18:08:57 2017 -0600
+
+    Set basic reducer, created store.
+
+[33mcommit 37f2eaabd25f9cd0ec3c83ad8c20f27fb0d7c867[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Mon Jul 3 18:07:05 2017 -0600
+
+    Added preliminary ducks files.
+
+[33mcommit 2c8019c52b89d08f439afc72b0769af01f12dfcf[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Mon Jul 3 18:00:13 2017 -0600
+
+    Added basic routing.
+
+[33mcommit d5af33b1909fe033e94d193cbe537dc77dcdee46[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Mon Jul 3 16:41:12 2017 -0600
+
+    Added View components, Sass dependencies
+
+[33mcommit d19f355e95a72e6e21ed4116f749fa41e46f1047[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Mon Jul 3 13:55:37 2017 -0600
+
+    Updated Reduxios dependencies
+
+[33mcommit 552abc4d491985d24bd1b0eae4d263daf2978f65[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Mon Jun 26 14:59:59 2017 -0600
+
+    Added middleware for Reduxios
+
+[33mcommit 0830529ca7d5a9c732106f15950392ca11053af7[m
+Author: Jeremy Gray <jeremygray001@gmail.com>
+Date:   Mon Jun 26 14:52:20 2017 -0600
+
+    Started Reduxios.

@@ -13,22 +13,12 @@ var initialState = {
 
 export function reducer(state = initialState, action) {
   switch(action.type) {
-    case VIEW_ONE:
-      return initialState
-    case VIEW_TWO:
-      return initialState 
-    case VIEW_THREE:
-      return initialState
     case API_VIEW_ONE:
-      let newState = Object.assign(state.api, action.payload.data)
-      console.log("In reducer:", newState.name)
-      return action.payload.data
+      let newState = Object.assign(state.api, action.payload)
+      console.log("In reducer:", newState)
+      return Object.assign(state.api, action.payload.data)
+    default:
+    return state
   }
-  return state;
-}
-
-export function APIreducer(state = initialState, action) {
-  switch(action.type) {
-
-  }
+ 
 }
