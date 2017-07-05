@@ -1,6 +1,9 @@
+import axios from 'axios'
+
 export const VIEW_ONE = 'VIEW_ONE'
 export const VIEW_TWO = 'VIEW_TWO'
 export const VIEW_THREE = 'VIEW_THREE'
+
 
 export function getViewOne() {
  return {
@@ -22,3 +25,18 @@ export function getViewThree() {
   payload: ''
  }
 }
+
+export const API_VIEW_ONE = 'API_VIEW_ONE'
+export const API_VIEW_TWO = 'API_VIEW_TWO'
+export const API_VIEW_THREE = 'API_VIEW_THREE'
+
+export function getAPIViewOne() {
+ var promise = axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5')
+ .then(r => r)
+ //var promise = 'chicken feet'
+ return {
+  type: API_VIEW_ONE,
+  payload: promise
+ }
+}
+

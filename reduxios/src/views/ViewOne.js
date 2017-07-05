@@ -7,16 +7,32 @@ import Footer from '../components/Footer/Footer'
 
 import { connect } from 'react-redux'
 
+import axios from 'axios'
+
+import { getAPIViewOne } from '../ducks/actions'
+
+
 class ViewOne extends Component {
+
+
+
+  componentDidMount() {
+    this.props.getAPIViewOne()
+  }
+
+  
+  
+
   render() {
-    console.log(  )
+    console.log(this.props)
     return (
       <div>
         <Header />
         <Body> 
-          The content for this page is: <b>{this.props.viewData.data}</b> 
+       
           This is the content. I don't think I can render bootstrap components as children, though. That's not good!
-          <br/> I could also just pass down an API result as a prop here! And all the data will be accessible
+          <br/> I could also just pass down an API result as a prop here! And all the data will be accessible.
+         
         </Body>
         <Footer />
       </div>
@@ -24,12 +40,10 @@ class ViewOne extends Component {
   }
 }
 
-ViewOne.propTypes = {
 
-};
 function mapStateToProps(state) {
   return {
-    viewData: state.viewOne
+    apiData: state.api
   }
 }
-export default connect(mapStateToProps)(ViewOne);
+export default connect(mapStateToProps, { getAPIViewOne })(ViewOne);

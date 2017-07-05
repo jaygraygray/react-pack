@@ -4,12 +4,13 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-import store from './ducks/store'
 
 import { Provider } from 'react-redux'
 
+import store from './ducks/store'
+
 ReactDOM.render(
-<Provider store={store}>
+<Provider store={ store }>
   <App />
 </Provider>
 , 

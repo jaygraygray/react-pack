@@ -11,7 +11,7 @@ import { Switch, BrowserRouter, Route, Router } from 'react-router-dom'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div>sdfg
         <BrowserRouter>
           <Switch>
            <Route exact path="/" component={ViewOne} />
@@ -19,6 +19,7 @@ class App extends Component {
            <Route Path="/three" component={ViewThree} />
           </Switch>
         </BrowserRouter>
+     
       </div>
 
     );
