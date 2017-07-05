@@ -5,6 +5,8 @@ import Header from '../components/Header/Header'
 import Body from '../components/Body/Body'
 import Footer from '../components/Footer/Footer'
 
+import { connect } from 'react-redux'
+
 class ViewTwo extends Component {
   render() {
     return (
@@ -12,6 +14,7 @@ class ViewTwo extends Component {
         <Header />
         <Body> 
          <em>THIS IS THE SECOND VIEW</em>
+         <p>{this.props.viewData.data}</p>
         </Body>
         <Footer />
       </div>
@@ -19,4 +22,9 @@ class ViewTwo extends Component {
   }
 }
 
-export default ViewTwo;
+function mapStateToProps(state) {
+  return {
+    viewData: state.viewTwo
+  }
+}
+export default connect(mapStateToProps)(ViewTwo);

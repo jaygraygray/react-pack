@@ -5,6 +5,8 @@ import Header from '../components/Header/Header'
 import Body from '../components/Body/Body'
 import Footer from '../components/Footer/Footer'
 
+import { connect } from 'react-redux'
+
 class ViewThree extends Component {
   render() {
     return (
@@ -12,6 +14,7 @@ class ViewThree extends Component {
         <Header />
         <Body> 
          <em>THIS IS THE THIRD VIEW</em>
+         <p> {this.props.viewData.data} </p>
         </Body>
         <Footer />
       </div>
@@ -19,5 +22,10 @@ class ViewThree extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    viewData: state.viewThree
+  }
+}
 
-export default ViewThree;
+export default connect(mapStateToProps)(ViewThree);
