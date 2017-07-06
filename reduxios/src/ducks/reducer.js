@@ -1,14 +1,13 @@
 import {
   VIEW_ONE, VIEW_TWO, VIEW_THREE, 
-  API_VIEW_ONE
+  API_VIEW_ONE, API_VIEW_TWO, API_VIEW_THREE
 } from './actions'
 
 
 var initialState = {
-  viewOne: {data : 'This is data coming from the storee'},
-  viewTwo: {data : 'This is data coming from the store.'},
-  viewThree: {data : 'This is data coming from the store.'},
-  api: {}
+  viewOne: {},
+  viewTwo: {},
+  viewThree: {}
 }
 
 export function reducer(state = initialState, action) {
@@ -20,9 +19,13 @@ export function reducer(state = initialState, action) {
   //     return Object.assign(state.api, action.payload.data)
   // }
   switch(action.type) {
-    case 'API_VIEW_ONE':
-    let newState = {api: action.payload}
-    return newState
+    case API_VIEW_ONE:
+      return {viewOne: action.payload}
+    case API_VIEW_TWO:
+      return {viewTwo: action.payload}
+    case API_VIEW_THREE:
+      return {viewTwo: action.payload}
+    default:
+      return state
   }
- return state
 }

@@ -6,15 +6,26 @@ import Body from '../components/Body/Body'
 import Footer from '../components/Footer/Footer'
 
 import { connect } from 'react-redux'
+import axios from 'axios'
+
+import { getAPIViewTwo } from '../ducks/actions'
 
 class ViewTwo extends Component {
+
+  componentDidMount() {    
+    axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5').then((r) => {
+      this.props.getAPIViewTwo(r.data)
+    })
+  }
+
   render() {
+    console.log(this.props)
     return (
       <div>
         <Header />
         <Body> 
          <em>THIS IS THE SECOND VIEW</em>
-         <p>{this.props.viewData.data}</p>
+         <p>{this.props.viewData.name}</p>
         </Body>
         <Footer />
       </div>
@@ -27,4 +38,4 @@ function mapStateToProps(state) {
     viewData: state.viewTwo
   }
 }
-export default connect(mapStateToProps)(ViewTwo);
+export default connect(mapStateToProps, { getAPIViewTwo })(ViewTwo);

@@ -37,3 +37,16 @@ return {
    }
 }
 
+export function getAPIViewTwo(data) {
+    return {
+        type: API_VIEW_TWO,
+        payload: data
+    }
+}
+
+export function getAPIViewThree(data) {
+    return {
+        type: API_VIEW_THREE,
+        payload: data
+    }
+}
