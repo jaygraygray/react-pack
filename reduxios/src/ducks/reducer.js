@@ -21,7 +21,8 @@ export function reducer(state = initialState, action) {
   // }
   switch(action.type) {
     case 'API_VIEW_ONE':
-    return Object.assign(state.api, {shit: action.payload})
+    let newState = {api: action.payload}
+    return newState
   }
  return state
 }
