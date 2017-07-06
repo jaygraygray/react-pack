@@ -6,3 +6,4 @@ import promiseMiddleware  from "redux-promise-middleware";
 export default createStore(reducer, {}, applyMiddleware(
  promiseMiddleware()
 ))
+//export default createStore(reducer)

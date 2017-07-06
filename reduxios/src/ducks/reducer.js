@@ -12,13 +12,16 @@ var initialState = {
 }
 
 export function reducer(state = initialState, action) {
+  
+  // switch(action.type) {
+  //   case API_VIEW_ONE:
+  //     let newState = Object.assign(state.api, action.payload)
+  //     console.log(action.payload)
+  //     return Object.assign(state.api, action.payload.data)
+  // }
   switch(action.type) {
-    case API_VIEW_ONE:
-      let newState = Object.assign(state.api, action.payload)
-      console.log("In reducer:", newState)
-      return Object.assign(state.api, action.payload.data)
-    default:
-    return state
+    case 'API_VIEW_ONE':
+    return Object.assign(state.api, {shit: action.payload})
   }
- 
+ return state
 }
