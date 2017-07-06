@@ -31,7 +31,7 @@ class ViewOne extends Component {
         <Header />
         <Body> 
   
-      The value of This SHIT IS: <b>{this.props.apiData.name}</b> 
+      The value of: <b>{this.props.apiData.name}</b> 
           This is the content. I don't think I can render bootstrap components as children, though. That's not good!
           <br/> I could also just pass down an API result as a prop here! And all the data will be accessible.
          
