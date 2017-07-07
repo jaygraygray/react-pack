@@ -7,7 +7,8 @@ import {
 var initialState = {
   viewOne: {},
   viewTwo: {},
-  viewThree: {}
+  viewThree: {},
+  footerData: '...from the store...'
 }
 
 export function reducer(state = initialState, action) {

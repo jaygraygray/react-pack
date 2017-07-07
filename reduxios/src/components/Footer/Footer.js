@@ -6,7 +6,8 @@ class Footer extends Component {
       <div>
         <div className={`${css(style.footer)} row`}>
           <div className="col-sm-12">
-            <center><h4>This is a footer.</h4></center>
+            <center><h4>This is a footer.</h4></center> 
+            <p>This is data from the store: {this.props.data}</p>
           </div>
         </div>
       </div>
@@ -16,7 +17,9 @@ class Footer extends Component {
 const style = StyleSheet.create({
   footer: {
    background: "#000",
-   color: "#fff"
+   color: "#fff",
+   margin: '0',
+   padding: '0',
   }
 })
 export default Footer;

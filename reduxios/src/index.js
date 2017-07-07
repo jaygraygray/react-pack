@@ -8,14 +8,14 @@ import ViewOne from './views/ViewOne'
 import ViewTwo from './views/ViewTwo'
 import ViewThree from './views/ViewThree'
 
-import { Switch, HashRouter, Route } from 'react-router-dom'
+import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
 import { Provider } from 'react-redux'
 
 import store from './ducks/store'
 
 ReactDOM.render(
-<HashRouter>
+<BrowserRouter>
   <Provider store={ store }>
     <Switch>
       <Route exact path="/" component={ViewOne} />
@@ -23,7 +23,7 @@ ReactDOM.render(
       <Route path="/three" component={ViewThree} />
     </Switch>
   </Provider>
-</HashRouter>
+</BrowserRouter>
 , 
 document.getElementById('root'));
 registerServiceWorker();
