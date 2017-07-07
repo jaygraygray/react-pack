@@ -24,7 +24,7 @@ export function reducer(state = initialState, action) {
     case API_VIEW_TWO:
       return {viewTwo: action.payload}
     case API_VIEW_THREE:
-      return {viewTwo: action.payload}
+      return {viewThree: action.payload}
     default:
       return state
   }
