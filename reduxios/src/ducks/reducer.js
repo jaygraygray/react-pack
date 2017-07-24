@@ -8,24 +8,21 @@ var initialState = {
   viewOne: {},
   viewTwo: {},
   viewThree: {},
-  footerData: '...from the store...'
+  newTest: ['this is a test']
 }
 
 export function reducer(state = initialState, action) {
-  
-  // switch(action.type) {
-  //   case API_VIEW_ONE:
-  //     let newState = Object.assign(state.api, action.payload)
-  //     console.log(action.payload)
-  //     return Object.assign(state.api, action.payload.data)
-  // }
+
   switch(action.type) {
     case API_VIEW_ONE:
       return {viewOne: action.payload}
+
     case API_VIEW_TWO:
       return {viewTwo: action.payload}
+
     case API_VIEW_THREE:
       return {viewThree: action.payload}
+
     default:
       return state
   }
