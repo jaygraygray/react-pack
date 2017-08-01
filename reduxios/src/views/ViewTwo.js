@@ -13,9 +13,8 @@ import { getAPIViewTwo } from '../ducks/actions'
 class ViewTwo extends Component {
 
   componentDidMount() {    
-    axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5').then((r) => {
-      this.props.dispatch(getAPIViewTwo(r.data))
-    })
+    const p = axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5')
+    this.props.getAPIViewTwo(p)
   }
 
   

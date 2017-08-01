@@ -14,10 +14,10 @@ import { getAPIViewThree } from '../ducks/actions'
 class ViewThree extends Component {
 
     componentDidMount() {
-      axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5').then((r) => {
-        this.props.dispatch(getAPIViewThree(r.data))
-      })
+      const p = axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5')
+      this.props.getAPIViewThree(p)
   }
+    
   render() {
     const {
       viewData

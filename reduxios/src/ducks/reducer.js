@@ -14,14 +14,16 @@ var initialState = {
 export function reducer(state = initialState, action) {
 
   switch(action.type) {
-    case API_VIEW_ONE:
-      return {viewOne: action.payload}
 
-    case API_VIEW_TWO:
-      return {viewTwo: action.payload}
+    case API_VIEW_ONE + '_FULFILLED':
+      
+      return {viewOne: action.payload.data}
 
-    case API_VIEW_THREE:
-      return {viewThree: action.payload}
+    case API_VIEW_TWO + '_FULFILLED':
+      return {viewTwo: action.payload.data}
+
+    case API_VIEW_THREE + '_FULFILLED':
+      return {viewThree: action.payload.data}
 
     default:
       return state

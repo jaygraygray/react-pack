@@ -13,11 +13,12 @@ import { PageHeader, Panel, Well } from 'react-bootstrap'
 
 class ViewOne extends Component {
 
-  // componentDidMount() {
-  //   axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5').then((r) => {
-  //     this.props.dispatch(getAPIViewOne(r.data))
-  //   })
-  // }
+  componentDidMount() {
+    const p = axios.get('http://api.openweathermap.org/data/2.5/weather?q=Boston&APPID=2a71fc11ed3e7be089142b2de53f9cd5')
+    
+    this.props.getAPIViewOne(p)
+    
+  }
 
   render() {
     return (
@@ -28,7 +29,7 @@ class ViewOne extends Component {
             <div className="col-sm-2"></div>
           
             <div className="col-sm-8">
-            {/*The value of: {this.props.apiData && this.props.apiData.name }*/}
+            The value of: {this.props.apiData && this.props.apiData.name }
             <h1>View One</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis finibus nisi vitae dapibus. Nam sit amet mauris dictum, consequat ante id, porta tortor. Phasellus laoreet lorem eu ex iaculis, ac pellentesque purus accumsan. Phasellus semper ipsum neque, fringilla tempor urna rhoncus eget. Cras eleifend non magna vitae porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae euismod augue. Donec eu sem urna. Donec velit dolor, tempor at risus a, tristique scelerisque lacus. Vivamus nunc lacus, consectetur non velit non, posuere ultrices sapien.</p>
 
@@ -51,4 +52,6 @@ function mapStateToProps(state) {
     apiData: state.viewOne
   }
 }
-export default connect(mapStateToProps)(ViewOne);
+export default connect(mapStateToProps, { getAPIViewOne })(ViewOne);
+
+
